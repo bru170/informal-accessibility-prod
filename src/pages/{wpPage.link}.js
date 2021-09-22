@@ -4,7 +4,7 @@ import React from "react"
 import HeroBanner from "../components/HeroBanner/HeroBanner"
 import Layout from "../components/Layout/Layout"
 import BreadCrumb from "../components/BreadCrumb/BreadCrumb"
-import {Wrapper, Content} from "./pageStyle"
+import {PageWrapper, Content} from "./pageStyle"
 
 const PageTemplate = ({data}) => {
   console.log(data.wpPage.content)
@@ -19,7 +19,7 @@ const PageTemplate = ({data}) => {
         </Helmet>
       </div>
       <Layout>
-        <Wrapper>
+        <PageWrapper>
           <HeroBanner title={data.wpPage.title} />
           {data.wpPage.wpParent !== null && (
             <BreadCrumb parent={data.wpPage.wpParent && data.wpPage.wpParent.node} />
@@ -29,7 +29,7 @@ const PageTemplate = ({data}) => {
               __html: data.wpPage.content
             }}
           />
-        </Wrapper>
+        </PageWrapper>
       </Layout>
     </>
   )
