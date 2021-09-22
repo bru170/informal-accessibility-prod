@@ -4,7 +4,7 @@ import {graphql} from "gatsby"
 import Layout from "../../components/Layout/Layout"
 import BreadCrumb from "../../components/BreadCrumb/BreadCrumb"
 import CategoriesPostbar from "../../components/CategoriesPostBar/CategoriesPostbar"
-import {PageWrapper, PostContent, PostDetails, StyledH1, PersonIcon} from "../pageStyle"
+import {Wrapper, PostContent, PostDetails, StyledH1, PersonIcon} from "../pageStyle"
 
 const PostTemplate = ({data}) => {
   return (
@@ -18,7 +18,7 @@ const PostTemplate = ({data}) => {
         </Helmet>
       </div>
       <Layout>
-        <PageWrapper>
+        <Wrapper>
           <BreadCrumb
             parent={{
               uri: "/engagements/all-posts",
@@ -46,7 +46,7 @@ const PostTemplate = ({data}) => {
             author={data.post.author.node.name}
             categories={data.post.categories.nodes}
           />
-        </PageWrapper>
+        </Wrapper>
       </Layout>
     </>
   )
