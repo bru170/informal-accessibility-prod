@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import "fontsource-fira-sans/700.css"
+import {BsFillPersonFill} from "react-icons/bs"
 
 export const PageWrapper = styled.div`
   max-width: 1180px;
@@ -106,7 +107,6 @@ export const Content = styled.div`
     }
   }
 `
-// PostPage styles
 
 export const PostWrapper = styled.div`
   max-width: 1180px;
