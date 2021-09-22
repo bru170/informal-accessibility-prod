@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "sos-project",
-  "author": "bru170",
+  "author": "Antonia Bruno",
   "keywords": [
     "gatsby"
   ],
@@ -15,8 +15,15 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.15",
+    "@reach/skip-nav": "^0.16.0",
     "babel-plugin-styled-components": "^1.13.2",
+    "fontsource-fira-sans": "^4.0.0",
     "gatsby": "^3.13.1",
+    "gatsby-image": "^3.11.0",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^1.14.0",
     "gatsby-plugin-react-helmet": "^4.14.0",
     "gatsby-plugin-sharp": "^3.14.0",
@@ -28,6 +35,8 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
+    "react-icons": "^4.2.0",
+    "react-skip-nav": "0.0.13",
     "styled-components": "^5.3.1"
   }
 }

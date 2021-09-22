@@ -1,14 +1,16 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "sos-project",
+    description: `Kick off yoInfrastructures for partially digital citizens: Supporting informal welfare work in the digitized state `,
+    title: "SOS Project",
+    author: `@antoniabruno`
   },
   plugins: [
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        url: "\u0016http://localhost:10018/",
-      },
+        url: `http://localhost:10018/graphql`,
+        hostingWPCOM: false
+      }
     },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
@@ -20,9 +22,20 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: `${__dirname}/src/images`
       },
-      __key: "images",
+      __key: "images"
     },
-  ],
-};
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Fira Sans\:200, 400, 500, 600, 700, 800, 900`,
+          `Helvetica Neue\:200, 400, 500, 600, 700, 800, 900`,
+          `sans-serif\:200, 400, 500, 600, 700, 800, 900`
+        ],
+        display: `swap`
+      }
+    }
+  ]
+}
