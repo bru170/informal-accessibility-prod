@@ -26,7 +26,6 @@ exports.createPages = async ({graphql, actions, reporter}) => {
     }
   `)
 
-  // Check for errors
   if (result.errors) {
     reporter.panicOnBuild(`Something went horrible wrong!`, result.errors)
     return
@@ -34,14 +33,11 @@ exports.createPages = async ({graphql, actions, reporter}) => {
 
   const {allWpCategory, wp} = result.data
 
-  // Create pages for each category
   allWpCategory.edges.forEach((category) => {
     const postsPerPage = wp.readingSettings.postsPerPage
     const numberOfPosts = category.node.count
     const numPages = Math.ceil(numberOfPosts / postsPerPage)
 
-    // Some categories may be empty and we don't want to create pages for them
-    // Also don't want to create pages for uncategorized
     if (numberOfPosts > 0 || category.node.name !== "uncategorized") {
       Array.from({length: numPages}).forEach((_, i) => {
         createPage({
