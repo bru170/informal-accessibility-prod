@@ -4,7 +4,7 @@ import {graphql} from "gatsby"
 import Layout from "../../components/Layout/Layout"
 import BreadCrumb from "../../components/BreadCrumb/BreadCrumb"
 import CategoriesPostbar from "../../components/CategoriesPostBar/CategoriesPostbar"
-import {Wrapper, PostContent, PostDetails, StyledH1, PersonIcon} from "./engagement.style"
+import {Wrapper, PostContent, PostDetails, StyledH1, PersonIcon} from "./engagement.styles"
 
 const PostTemplate = ({data}) => {
   return (
